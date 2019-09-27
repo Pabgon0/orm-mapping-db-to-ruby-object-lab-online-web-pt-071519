@@ -86,7 +86,7 @@ class Student
     DB[:conn].execute(sql).map do |row|
       array = self.new_from_db(row)
       array
-    end
+    end.first
   end
   
   def save
