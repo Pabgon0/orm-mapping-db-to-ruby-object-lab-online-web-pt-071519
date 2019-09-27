@@ -42,8 +42,8 @@ class Student
     SQL
     
     DB[:conn].execute(sql, name).map do |row|
-      self.new_from_db(row)
-      
+      array = self.new_from_db(row)
+      array
     end
   end
   
